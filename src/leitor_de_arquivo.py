@@ -21,7 +21,9 @@ def ler_arquivo_ins():
 
 # Função que calcula a distância euclidiana entre dois pontos
 def calcular_distancia_euclidiana(coord1, coord2):
-    return math.sqrt((coord1[1] - coord2[1])**2 + (coord1[2] - coord2[2])**2)
+    xd = coord1[1] - coord2[1]
+    yd = coord1[2] - coord2[2]
+    return round(math.sqrt(xd * xd + yd * yd))
 
 # Função que preenche a matriz de adjacência com as distâncias euclidianas entre os pontos
 def preencher_matriz_adjacencia(coordenadas):
@@ -41,7 +43,7 @@ def gerar_matriz_de_adjacencia():
     coordenadas = ler_arquivo_ins()
     matriz_adjacencia = preencher_matriz_adjacencia(coordenadas)
     
-    print("Matriz de Adjacência:")
+    # print("Matriz de Adjacência:")
     # Imprime a matriz de adjacência
     """
     for linha in range(len(matriz_adjacencia)): 
