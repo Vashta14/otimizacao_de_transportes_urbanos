@@ -1,3 +1,6 @@
+import math
+
+
 def ligar_vertices_impares(matriz_adjacencia, mst):
     n = len(matriz_adjacencia)
     grau = [0] * n
@@ -63,3 +66,32 @@ def adicionar_arestas_para_grau_par_otimizado(matriz_adjacencia, mst):
     for u, v, peso in arestas_adicionais:
         grafo_euleriano.append((u, v, peso))
     return grafo_euleriano
+
+def tsp_guloso(matriz_adjacencia):
+    n = len(matriz_adjacencia)
+    visitados = [False] * n
+    caminho = []
+    custo_total = 0
+
+    vertice_atual = 0
+    visitados[vertice_atual] = True
+    caminho.append(vertice_atual)
+
+    for _ in range(n - 1):
+        proximo_vertice = -1
+        menor_distancia = math.inf
+
+        for v in range(n):
+            if not visitados[v] and matriz_adjacencia[vertice_atual][v] < menor_distancia:
+                menor_distancia = matriz_adjacencia[vertice_atual][v]
+                proximo_vertice = v
+
+        vertice_atual = proximo_vertice
+        visitados[vertice_atual] = True
+        caminho.append(vertice_atual)
+        custo_total += menor_distancia
+
+    caminho.append(0)
+    custo_total += matriz_adjacencia[vertice_atual][0]
+
+    return caminho, custo_total
