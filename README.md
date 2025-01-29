@@ -1,10 +1,10 @@
-## Cabecalho
+## Cabeçalho
 
-Este e um trabalho da disciplina de Algoritmos em Grafos - GCC218
+Este é um trabalho da disciplina de Algoritmos em Grafos - GCC218
 - Ministrado pelo: Professor Mayron César de Oliveira Moreira.
 - Realizado pelos alunos: 
-Carlos Eduardo Borges de Sousa - 202020296
-Raul Souza Lima -  
+- Carlos Eduardo Borges de Sousa - 202020296
+- Raul Souza Lima -  
 
 
 
@@ -14,7 +14,8 @@ Este projeto implementa uma solução para o problema de otimização das rotas 
 
 
 
-## Estrutura do Codigo
+## Estrutura do Código
+
 O código está modularizado nos seguintes arquivos:
 
 - **`leitor_de_arquivo.py`** → Lê o arquivo de entrada e gera a matriz adjacência.
@@ -51,11 +52,11 @@ Fleury:
 
 - Os arquivos de entrada sao instâncias fornecidas, no formato "02.ins" por exemplo:
 
-1 0.00000e+00 0.00000e+00
-2 8.37000e+02 9.58300e+02
-3 8.62400e+02 9.58300e+02
-4 8.87800e+02 9.58300e+02
-5 9.13200e+02 9.58300e+02
+-  0.00000e+00 0.00000e+00
+-  8.37000e+02 9.58300e+02
+-  8.62400e+02 9.58300e+02
+-  8.87800e+02 9.58300e+02
+-  9.13200e+02 9.58300e+02
 
 
 ## Saída
@@ -69,11 +70,11 @@ A saída é feita em um arquivo no formato "saida.txt".
 
 Por exemplo:
 
-Guloso:
-Solução inicial: 74032
-Solução final: 50801
-Desvio percentual: -45.729414775299695%
-Tempo de execucao: 0.238265 segundos
+- Guloso:
+- Solução inicial: 74032
+- Solução final: 50801
+- Desvio percentual: -45.729414775299695%
+- Tempo de execucao: 0.238265 segundos
 
 ## Exemplo de uso
 
@@ -83,7 +84,7 @@ Tempo de execucao: 0.238265 segundos
 
 https://github.com/Vashta14/otimizacao_de_transportes_urbanos.git
 
-## Guia de soluções otimas
+## Guia de soluções ótimas
 
 - 02.ins -> 50801
 - 03.ins -> 62128
