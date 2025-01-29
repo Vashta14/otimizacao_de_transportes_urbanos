@@ -45,7 +45,7 @@ def fleury(grafo, inicio):
 
         for vizinho in grafo[atual]:
             if not eh_ponte(atual, vizinho, grafo): 
-                caminho.append((atual, vizinho))
+                caminho.append(atual)
                 remover_aresta(grafo, atual, vizinho)
                 atual = vizinho
                 encontrou_aresta_valida = True
@@ -54,7 +54,7 @@ def fleury(grafo, inicio):
         if not encontrou_aresta_valida:
             if grafo[atual]: 
                 vizinho = grafo[atual][0]
-                caminho.append((atual, vizinho))
+                caminho.append(atual)
                 remover_aresta(grafo, atual, vizinho)
                 atual = vizinho
             else:

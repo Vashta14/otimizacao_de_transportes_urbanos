@@ -42,14 +42,6 @@ def preencher_matriz_adjacencia(coordenadas):
 def gerar_matriz_de_adjacencia():
     coordenadas = ler_arquivo_ins()
     matriz_adjacencia = preencher_matriz_adjacencia(coordenadas)
-    
-    # print("Matriz de Adjacência:")
-    # Imprime a matriz de adjacência
-    """
-    for linha in range(len(matriz_adjacencia)): 
-        for coluna in range(len(matriz_adjacencia[linha])):
-            print(str(linha) + ' ' + str(coluna) + ' '+ str(matriz_adjacencia[linha][coluna]) +  ' ')
-        print('\n')
-    """
+
     return matriz_adjacencia
 
