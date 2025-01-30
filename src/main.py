@@ -8,6 +8,7 @@ from algoritmo_fleury import converter_para_lista_adjacencia, fleury
 from saida import salvar_saida
 
 def mst(matriz):
+    inicio = time.time()
     print("mst + emparelhamento perfeito minimo + fleury")
     mst = gerar_mst(matriz)
     ciclo_euleriano_emparelhamento_minimo = adicionar_arestas_para_grau_par_otimizado(matriz, mst)
@@ -15,15 +16,19 @@ def mst(matriz):
     peso_emparelhamento_minimo = 0
     for _u, _v, peso in ciclo_euleriano_emparelhamento_minimo:
         peso_emparelhamento_minimo += peso
+    final = time.time()
     print(f"Solução final: {peso_emparelhamento_minimo}") 
-
+    print(f"Tempo de execução: {final - inicio:.6f} segundos")
     return "mst", caminho, peso_emparelhamento_minimo
     
 def guloso(matriz):
+    inicio = time.time()
     print("guloso")
     caminho, peso_total = tsp_guloso(matriz)
+    final = time.time()
     print(f"Solução final: {peso_total}") 
-    
+    print(f"Tempo de execução: {final - inicio:.6f} segundos")
+   
     return "guloso",caminho, peso_total
 
 
